@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Tap : MonoBehaviour
 {
-    public float moveSpeed = 5f;  
-    public float moveDistance = 10f;  
+    public float moveSpeed = 2f;  
+    public float moveDistance = 3f;  
     private Vector3 startPos;
 
     void Start()
