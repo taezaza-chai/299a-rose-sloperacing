@@ -2,17 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public GameObject restartButton;  // อ้างอิงปุ่ม Restart
     private float elapsedTime = 0f;
     private bool isRunning = true;
-
-    void Start()
-    {
-        restartButton.SetActive(false);  
-    }
 
     void Update()
     {
@@ -33,11 +28,11 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         isRunning = false;
-        restartButton.SetActive(true);  
+        restartButton.SetActive(true);  // แสดงปุ่ม Restart เมื่อจบเกม
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // โหลดซีนใหม่
     }
 }

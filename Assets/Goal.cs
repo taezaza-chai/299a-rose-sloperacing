@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public Timer gameManager;
+    public Timer gameManager;  
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))  
         {
-            gameManager.StopTimer();
-            Debug.Log("Finish Line Reached!");
+            Debug.Log("Player reached the goal!");
+            gameManager.StopTimer();  
         }
     }
 }
-
